@@ -1,7 +1,7 @@
 import qrcode
 
 # 🔴 IMPORTANTE: Cambia esto por la IP de tu computadora
-url = "http://192.168.0.2:8000/"
+url = "https://vanessasalcedo.pythonanywhere.com/"
 
 # Generar QR
 img = qrcode.make(url)

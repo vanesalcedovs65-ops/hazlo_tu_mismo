@@ -4,8 +4,10 @@
 
 <h2>Menú del Restaurante</h2>
 
-<a class="btn" href="{% url 'ver_menu' %}">Ver menú de productos</a>
-<a class="btn" href="{% url 'pedidos' %}">Ver pedidos</a>
-<a class="btn" href="{% url 'logout' %}">Cerrar sesión</a>
+<div class="links-acciones">
+    <a class="btn" href="{% url 'ver_menu' %}">Ver menú de productos</a>
+    <a class="btn" href="{% url 'pedidos' %}">Ver pedidos</a>
+    <a class="btn" href="{% url 'logout' %}">Cerrar sesión</a>
+</div>
 
 {% endblock %}

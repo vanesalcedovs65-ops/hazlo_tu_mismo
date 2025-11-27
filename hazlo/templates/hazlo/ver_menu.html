@@ -7,7 +7,8 @@
 <h3>🥘 Porciones personales</h3>
 {% for p in personales %}
 <div class="producto">
-    <strong>{{ p.nombre }}</strong> — ${{ p.precio }}
+    <strong>{{ p.nombre }}</strong>
+    <small>${{ p.precio }}</small>
     <form method="POST" action="#">
         {% csrf_token %}
         <input type="number" name="cantidad" min="1" value="1">
@@ -15,42 +16,5 @@
     </form>
 </div>
 {% empty %}
-<p style="color:#c9b8a8;">No hay productos disponibles.</p>
+<p style="color:#c9b8a8;">No hay platillos personales disponibles.</p>
 {% endfor %}
-
-<hr>
-
-<h3>🍽️ Porciones familiares</h3>
-{% for p in familiares %}
-<div class="producto">
-    <strong>{{ p.nombre }}</strong> — ${{ p.precio }}
-    <form method="POST" action="#">
-        {% csrf_token %}
-        <input type="number" name="cantidad" min="1" value="1">
-        <button>Agregar al carrito</button>
-    </form>
-</div>
-{% empty %}
-<p style="color:#c9b8a8;">No hay productos disponibles.</p>
-{% endfor %}
-
-<hr>
-
-<h3>🥤 Bebidas</h3>
-{% for p in bebidas %}
-<div class="producto">
-    <strong>{{ p.nombre }}</strong> — ${{ p.precio }}
-    <form method="POST" action="#">
-        {% csrf_token %}
-        <input type="number" name="cantidad" min="1" value="1">
-        <button>Agregar al carrito</button>
-    </form>
-</div>
-{% empty %}
-<p style="color:#c9b8a8;">No hay bebidas disponibles.</p>
-{% endfor %}
-
-<br>
-<a class="btn" href="{% url 'menu' %}">Volver</a>
-
-{% endblock %}
