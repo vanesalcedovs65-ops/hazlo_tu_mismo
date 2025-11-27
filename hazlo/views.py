@@ -2,11 +2,21 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Platillo, Pedido
 
+
 # ==========================================
 #   PÁGINA DE INICIO
 # ==========================================
 def inicio(request):
+    # Puedes cambiar este template si quieres otra página de inicio
     return render(request, "hazlo/menu.html")
+
+
+# ==========================================
+#   REGISTRO (si tu URL lo usa)
+# ==========================================
+def registro(request):
+    # Si tienes un template hazlo/registro.html se mostrará aquí
+    return render(request, "hazlo/registro.html")
 
 
 # ==========================================
