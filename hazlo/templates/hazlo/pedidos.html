@@ -1,0 +1,11 @@
+{% extends "hazlo/base.html" %}
+
+{% block content %}
+
+<h2>Lista de pedidos</h2>
+<p style="color:#e0d4c2;">Aquí aparecerán los pedidos realizados.</p>
+
+<a class="btn" href="{% url 'menu' %}">Volver al menú</a>
+<a class="btn" href="{% url 'logout' %}">Cerrar sesión</a>
+
+{% endblock %}

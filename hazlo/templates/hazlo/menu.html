@@ -1,0 +1,11 @@
+{% extends "hazlo/base.html" %}
+
+{% block content %}
+
+<h2>Menú del Restaurante</h2>
+
+<a class="btn" href="{% url 'ver_menu' %}">Ver menú de productos</a>
+<a class="btn" href="{% url 'pedidos' %}">Ver pedidos</a>
+<a class="btn" href="{% url 'logout' %}">Cerrar sesión</a>
+
+{% endblock %}
